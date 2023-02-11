@@ -4088,7 +4088,7 @@ textarea.form-control-lg {
   align-items: center;
 }
 
-.navbar-toggler {
+.navbar-navbar {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
@@ -4098,20 +4098,20 @@ textarea.form-control-lg {
   transition: box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .navbar-toggler {
-    transition: none;
+  .navbar-togglers {
+    transition: 0.3s ease-in-out;
   }
 }
-.navbar-toggler:hover {
+.navbar-togglers:hover {
   text-decoration: none;
 }
-.navbar-toggler:focus {
+.navbar-togglers:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: 0 0 0 0.25rem;
 }
 
-.navbar-toggler-icon {
+.navbar-togglers-icon {
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
@@ -4148,7 +4148,7 @@ textarea.form-control-lg {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-sm .navbar-toggler {
+  .navbar-expand-sm .navbar-togglers {
     display: none;
   }
   .navbar-expand-sm .offcanvas-header {
@@ -4201,7 +4201,7 @@ textarea.form-control-lg {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-md .navbar-toggler {
+  .navbar-expand-md .navbar-togglers {
     display: none;
   }
   .navbar-expand-md .offcanvas-header {
@@ -4254,7 +4254,7 @@ textarea.form-control-lg {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-lg .navbar-toggler {
+  .navbar-expand-lg .navbar-togglers {
     display: none;
   }
   .navbar-expand-lg .offcanvas-header {
@@ -4307,7 +4307,7 @@ textarea.form-control-lg {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-xl .navbar-toggler {
+  .navbar-expand-xl .navbar-togglers {
     display: none;
   }
   .navbar-expand-xl .offcanvas-header {
@@ -4360,7 +4360,7 @@ textarea.form-control-lg {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-xxl .navbar-toggler {
+  .navbar-expand-xxl .navbar-togglers {
     display: none;
   }
   .navbar-expand-xxl .offcanvas-header {
@@ -4412,7 +4412,7 @@ textarea.form-control-lg {
   display: flex !important;
   flex-basis: auto;
 }
-.navbar-expand .navbar-toggler {
+.navbar-expand .navbar-togglers {
   display: none;
 }
 .navbar-expand .offcanvas-header {
@@ -4462,11 +4462,11 @@ textarea.form-control-lg {
 .navbar-light .navbar-nav .nav-link.active {
   color: rgba(0, 0, 0, 0.9);
 }
-.navbar-light .navbar-toggler {
+.navbar-light .navbar-togglers {
   color: rgba(0, 0, 0, 0.55);
   border-color: rgba(0, 0, 0, 0.1);
 }
-.navbar-light .navbar-toggler-icon {
+.navbar-light .navbar-togglers-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
@@ -4497,11 +4497,11 @@ textarea.form-control-lg {
 .navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
 }
-.navbar-dark .navbar-toggler {
+.navbar-dark .navbar-togglers {
   color: rgba(255, 255, 255, 0.55);
   border-color: rgba(255, 255, 255, 0.1);
 }
-.navbar-dark .navbar-toggler-icon {
+.navbar-dark .navbar-togglers-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-dark .navbar-text {
@@ -11348,12 +11348,14 @@ p {
   padding-bottom: 1rem;
   background-color: #fff;
 }
-#mainNav .navbar-toggler {
-  padding: 0.75rem;
-  font-size: 0.75rem;
+#mainNav .navbar-togglers {
+  padding: 5px 10px;
+  font-size: 1.7rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   font-weight: 700;
+  color: #771AB5;
+  
 }
 #mainNav .navbar-brand {
   color: #af55ef;
@@ -11393,6 +11395,7 @@ p {
   }
   #mainNav .navbar-brand img {
     height: 2rem;
+    transition: height 0.3s ease-in-out;
     width: 8rem;
     
   }
@@ -11409,8 +11412,8 @@ p {
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 2rem;
-    width: 8rem;
+    height: 45px;
+    width: 225px;
     opacity: 100%;
   }
   #mainNav .navbar-nav .nav-item {
@@ -11420,7 +11423,68 @@ p {
     margin-right: 0;
   }
 }
-
+/* small screen */
+@media (max-width: 991px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border: none;
+    background-color: transparent;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand img {
+    height: 2rem;
+    transition: height 0.3s ease-in-out;
+    width: 8rem;
+    opacity: 0%;
+    
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #fff;
+    opacity: 78%;
+    
+    
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+  }
+  #mainNav.navbar-shrink .navbar-brand svg,
+#mainNav.navbar-shrink .navbar-brand img {
+    height: 45px;
+    width: 225px;
+    opacity: 100%;
+  }
+  #mainNav .navbar-nav .nav-item {
+    margin-right: 1rem;
+  }
+  #mainNav .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
@@ -11758,7 +11822,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0563bb;
+  background: #771AB5;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -11772,7 +11836,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .back-to-top:hover {
-  background: #0678e3;
+  background: #771AB5;
   color: #fff;
 }
 
@@ -12033,4 +12097,69 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
 
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #771AB5;
+  display: block;
+  transition: 0.3s;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  opacity: 100%;
+  letter-spacing: 0.0625em;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  
+  color: #771AB5;
+  padding: 10px 10px;
+  border: #771AB5;
+  margin-left: 99%; 
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

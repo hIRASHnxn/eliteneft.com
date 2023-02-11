@@ -86,7 +86,14 @@ body {
     margin-left: 20px;
     margin-top:  10px;
   }
-  
+  @media (max-width: 991px){
+    .navbar-brands img {
+      width: 230px;
+      margin-right: 10px;
+      margin-left: 5px;
+      margin-top:  15px;
+    }
+}
   .navbar-brands span {
     text-transform: uppercase;
     font-size: 24px;

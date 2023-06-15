@@ -12167,3 +12167,14 @@ section#contact form#contactForm :-ms-input-placeholder {
   .sidebar a {font-size: 18px;}
 }
 
+img.bestweb {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70%;
+  width: 200px;
+  position: fixed;
+  visibility: visible;
+  bottom: 15px;
+  z-index: 996;
+  transition: all 0.4s;
+}
